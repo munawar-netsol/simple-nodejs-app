@@ -1,6 +1,7 @@
 pipeline {
     agent any
-        stages{
+        stages
+        {
             stage('One') {
                 steps {
                     echo 'hi1'
@@ -16,11 +17,10 @@ pipeline {
                     not {
                         branch 'maindsd'
                     }
+                    steps {
+                        echo 'hi23 mew 1'
+                    }
                 }
-                steps {
-                    echo 'hi23 mew 1'
-                }
-                
             }
         }
 }
