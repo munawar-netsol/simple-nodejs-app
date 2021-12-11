@@ -18,7 +18,7 @@ pipeline {
                     }
                 }
                 steps {
-                    echo 'hi23'
+                    echo 'hi23 mew'
                 }
                 
             }
