@@ -15,7 +15,7 @@ pipeline {
             stage('test'){
                 when {
                     changeset "*.js"
-                }                
+                }                                
                 steps{
                     echo "The file did change in the last commit (SCM checking)"
                 }
