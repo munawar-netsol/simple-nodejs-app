@@ -4,12 +4,13 @@ pipeline {
         {
             stage('One') {
                 steps {
-                    echo 'hi1'
+                    echo 'Starting...'
                 }
             }
             stage('two') {
                 steps {
-                    input('Input to proceed?');
+                    //input('Input to proceed?');
+                    echo 'hi input'
                 }
             }
             stage('test'){
@@ -18,6 +19,25 @@ pipeline {
                 }                                
                 steps{
                     echo "The file did change in the last commit (SCM checking)"
+                }
+            }
+            stage('Four') {
+                parallel {
+                    stage('Unit Testing') {
+                        steps {
+                            echo 'Running the unit Testing!'
+                        }
+                    }
+                    stage('Integration Testing') {
+                        agent {
+                            docker {
+                                FROM node:alpine
+                            }
+                        }
+                        steps {
+                            echo 'Running the Integration Testing!'
+                        }
+                    }
                 }
             }
         }
