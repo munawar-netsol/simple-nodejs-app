@@ -14,7 +14,7 @@ pipeline {
             }
             stage('test'){
                 when {
-                    branch 'master'
+                    changeset "*.yaml"
                 }
                 steps{
                     echo "The file did change in the last commit (SCM checking)"
