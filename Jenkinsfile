@@ -12,9 +12,15 @@ pipeline {
                 }
             }
             stage('three') {
-                steps {
-                    echo 'hi3'
+                when {
+                    not {
+                        branch 'main'
+                    }
                 }
+                steps {
+                    echo 'hi23'
+                }
+                
             }
         }
 }
