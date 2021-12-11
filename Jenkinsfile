@@ -33,7 +33,7 @@ pipeline {
                             dockerfile {
                                 filename 'Dockerfile'
                                 registryUrl 'https://hub.docker.com/repository/docker/munawersheikh/docker-example'
-                                registryCredentialsId 'munawersheikh'                             
+                                registryCredentialsId 'munawersheikh/******'                             
                             }
                         }
                         steps {
