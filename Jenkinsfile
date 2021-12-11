@@ -30,9 +30,9 @@ pipeline {
                     }
                     stage('Integration Testing') {
                         agent {
-                            docker {
-                                reuseNode false
-                                image 'node:alpine'
+                            dockerfile {
+                                filename 'Dockerfile'
+                                
                             }
                         }
                         steps {
