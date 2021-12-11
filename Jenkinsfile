@@ -12,12 +12,13 @@ pipeline {
                     input('Input to proceed?');
                 }
             }
-            stage('three') {
-                steps {
-                    input('Input to proceed?');
+            stage('test'){
+                when {
+                    changeset "*.yaml"
                 }
-                when { branch 'main' }
-                    
+                steps{
+                    echo "The file did change in the last commit (SCM checking)"
+                }
             }
         }
 }
