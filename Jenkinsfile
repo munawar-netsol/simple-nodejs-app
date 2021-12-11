@@ -13,8 +13,10 @@ pipeline {
                 }
             }
             stage('three') {
+                steps {
+                    input('Input to proceed?');
+                }
                 when { branch 'maindsd' }
-                        echo 'hi23 mew 1 2'
                     
             }
         }
