@@ -31,7 +31,8 @@ pipeline {
                     stage('Integration Testing') {
                         agent {
                             docker {
-                                FROM node:alpine
+                                reuseNode false
+                                image 'node:alpine'
                             }
                         }
                         steps {
