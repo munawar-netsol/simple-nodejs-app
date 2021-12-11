@@ -14,9 +14,8 @@ pipeline {
             }
             stage('three') {
                 when { branch 'maindsd' }
-                steps {
                         echo 'hi23 mew 1 2'
-                    }
+                    
             }
         }
 }
