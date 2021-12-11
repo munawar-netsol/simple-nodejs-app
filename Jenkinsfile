@@ -14,7 +14,7 @@ pipeline {
             }
             stage('test'){
                 when {
-                    branch 'main'
+                    branch 'master'
                 }
                 steps{
                     echo "The file did change in the last commit (SCM checking)"
