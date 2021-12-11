@@ -16,7 +16,7 @@ pipeline {
                 steps {
                     input('Input to proceed?');
                 }
-                when { branch 'maindsd' }
+                when { branch 'main' }
                     
             }
         }
