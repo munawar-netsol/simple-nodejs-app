@@ -14,11 +14,11 @@ pipeline {
             stage('three') {
                 when {
                     not {
-                        branch 'main'
+                        branch 'maindsd'
                     }
                 }
                 steps {
-                    echo 'hi23 mew'
+                    echo 'hi23 mew 1'
                 }
                 
             }
